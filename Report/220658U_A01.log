@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.6)  11 SEP 2025 13:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.6)  11 SEP 2025 13:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -867,6 +867,11 @@ File: images/q1_3_1.png Graphic file (type png)
 <use images/q1_3_1.png>
 Package pdftex.def Info: images/q1_3_1.png  used on input line 60.
 (pdftex.def)             Requested size: 469.75499pt x 226.55623pt.
+<images/q1_3_2.png, id=30, 1207.51125pt x 654.19406pt>
+File: images/q1_3_2.png Graphic file (type png)
+<use images/q1_3_2.png>
+Package pdftex.def Info: images/q1_3_2.png  used on input line 69.
+(pdftex.def)             Requested size: 469.75499pt x 254.49579pt.
 
 
 [1
@@ -875,7 +880,7 @@ Package pdftex.def Info: images/q1_3_1.png  used on input line 60.
 ata/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./images/q1_3_1.png (PN
 G copy)>]
 
-[2] (220658U_A01.aux)
+[2 <./images/q1_3_2.png>] (220658U_A01.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -884,10 +889,10 @@ Package rerunfilecheck Info: File `220658U_A01.out' has not changed.
 (rerunfilecheck)             Checksum: D4FF8C319E7C2AAA712472BBAEF55A21;630.
  ) 
 Here is how much of TeX's memory you used:
- 24701 strings out of 473530
- 468065 string characters out of 5716247
- 855889 words of memory out of 5000000
- 47543 multiletter control sequences out of 15000+600000
+ 24710 strings out of 473530
+ 468249 string characters out of 5716247
+ 856929 words of memory out of 5000000
+ 47551 multiletter control sequences out of 15000+600000
  579880 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,8n,87p,538b,695s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -895,10 +900,11 @@ Here is how much of TeX's memory you used:
 a.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/b
 chr8a.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
 s/cm/cmmi10.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmr7.pfb>
-Output written on 220658U_A01.pdf (2 pages, 220993 bytes).
+msfonts/cm/cmr10.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmr7.pfb>
+Output written on 220658U_A01.pdf (2 pages, 281013 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 9 named destinations out of 1000 (max. 500000)
- 58 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 PDF objects out of 1000 (max. 8388607)
+ 10 named destinations out of 1000 (max. 500000)
+ 63 words of extra memory for PDF output out of 10000 (max. 10000000)
 

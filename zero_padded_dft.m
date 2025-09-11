@@ -1,5 +1,5 @@
-function [result] = zero_padded_fft(x, K)
-%UNTITLED Summary of this function goes here
+function [result] = zero_padded_dft(x, K)
+% ZERO_PADDED_DFT 
 %   Detailed explanation goes here
 
 X = fft(x);

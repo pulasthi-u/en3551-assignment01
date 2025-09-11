@@ -63,3 +63,7 @@ xlabel("Frequency (Hz)", "Interpreter", "latex");
 xlim([0 f(K)]);
 grid on;
 grid minor;
+
+% 3.1.5 - What is the smallest value of L such that the peaks remain
+% visible?
+
