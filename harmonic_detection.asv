@@ -14,7 +14,7 @@ tiledlayout(3, 2, "TileSpacing", "compact", "Padding", "compact");
 
 for i = 1:5
     N_i = Ns(i); % Number of samples in the ith subset
-    f_i = [0:(N_i-1)] * fs / N_i; % Frequencies corresponding to the ith subset
+    f_i = [0:(N_i-1)] * fs / N_i; % Frequency axis corresponding to the ith subset
 
     % 3.1.2 - Form the ith subset s_i
     s_i = xn_test(1:N_i);
@@ -43,15 +43,57 @@ end
 
 % Try to detect harmonics by averaging
 
-% 3.1.4 - Construct L = 14 subsets of K = 128 samples each
-L = 14;
-K = 128;
+L = 14; % Number of subsets
+K = 128; % Number of samples in a subset
 
+% 3.1.4 - Find the average DFT from L = 14 consecutive subsets of K = 128
+% samples each, and then obtain its magnitude
 X_avg = dft_average(xn_test, L, K);
 X_avg_mag = abs(X_avg);
 
-f = [0:(K-1)] * fs / K;
+f = [0:(K-1)] * fs / K; % Define the frequency axis
 
+% Plot the magnitude of the average DFT
 figure(2);
-stem(f, X_avg_mag);
+
+stem(f, X_avg_mag, "Marker", "o", "MarkerSize", 3, "MarkerFaceColor", "auto");
+
+title("Magnitude of Averaged DFTs", "Interpreter", "latex");
+xlabel("Frequency (Hz)", "Interpreter", "latex");
 xlim([0 f(K)]);
+grid on;
+grid minor;
+
+% 3.1.5 - What is the smallest value of L such that the peaks remain
+% visible?
+
+figure(3);
+tiledlayout(5,2);
+
+% We will try smaller values L_s for L, starting from 1 less than the last
+% used value
+for L_s = L-1:-1:1
+    if ~mod(K*L, L_s) 
+        % We only choose values of L_s that allow us to use all K*L samples
+        % previously used; i.e., such that there exists some K' for which
+        % K'*L_s = K*L
+        K_ = K*L / L_s;
+
+        % Obtain the average DFT for the chosen pair L, K
+        X_avg_ = dft_average(xn_test, L_s, K_);
+        X_avg_mag_ = abs(X_avg_);
+
+        f = [0:(K_-1)] * fs / K_; % Obtain the frequency axis for the chosen K
+
+        nexttile;
+        
+        % Plot
+        stem(f, X_avg_mag_, "Marker", "o", "MarkerSize", 3, "MarkerFaceColor", "auto");
+
+        title("Average DFT Magnitude, $L=" + L_s + "$, $K=" + K_ + "$", "Interpreter", "latex");
+        xlabel("Frequency (Hz)", "Interpreter", "latex");
+        xlim([0 f(K_)]);
+        grid on;
+        grid minor;
+    end
+end
