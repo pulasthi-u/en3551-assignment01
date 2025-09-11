@@ -1,0 +1,74 @@
+\documentclass{article}[a4paper]
+\usepackage[a4paper, total={6.5in, 9in}]{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{tabularray}
+\usepackage{charter}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+
+\newcommand{\extlink}{
+	\begin{tikzpicture}[scale=0.1]
+		\draw[rounded corners=0.5mm, line width=0.9pt] (-1, -1) rectangle (1, 1);
+		\fill[white] (0, 0) rectangle (1.3, 1.3);
+		\draw[line width=0.9pt, line cap=round] (0.15, 0.15) -- (1.3, 1.3);
+		\draw[line width=0.9pt, line cap=round] (0.5, 1.3) -- (1.3, 1.3) -- (1.3, 0.5);
+	\end{tikzpicture}
+}
+
+\title{
+	\huge{\textbf{
+		Assignment 01
+	}}\\
+	\large{\phantom{}}\\
+	\large{
+		submitted for
+	}\\
+	\Large{
+		\textbf{EN3551 - Digital Signal Processing}
+	}\\
+	\large{
+		Department of Electronic and Telecommunication Engineering
+	}
+	\\
+	\large{University of Moratuwa}
+}
+
+\author{
+	\textbf{Udugamasooriya P. H. J.}\\
+	220658U\\
+	\small{Progress on \href{https://github.com/pulasthi-u/en3150-assignment01}{GitHub \extlink}}
+}
+
+\date{12 September 2025}
+
+\begin{document}
+	\maketitle
+	
+	\section{Harmonic Detection}
+	
+	\textbf{Question 03} Five subsets of the provided signal were formed as described. The magnitude plots of the DFTs of each of these subsets are indicated in Figure \ref{subset_dfts}.
+	
+	\begin{figure}[H]
+		\centering
+		% \includegraphics[width=0.8\linewidth]{images/q1_3_1.png}
+		\label{subset_dfts}
+		\caption{Caption}
+	\end{figure}
+	
+	\section{Interpolation}
+	
+	\appendix
+	\section{Code Snippets}
+	\label{code}
+	
+	\subsection{Harmonic Detection}
+	
+	\subsection{Interpolation}
+	
+\end{document}
