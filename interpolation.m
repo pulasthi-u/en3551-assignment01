@@ -9,10 +9,39 @@ x4 = y(1:4:N);
 
 x2_interpolated = interpolate(zero_padded_fft(x2, 1), 1);
 
+% disp(norm(x2_interpolated - x1));
+
 figure(1);
-stem([1:50], x1(1:50));
+subplot(3, 1, 1);
+stem(x1(1:50));
+
+subplot(3, 1, 2);
+stem(x2_interpolated(1:50));
+
+subplot(3, 1, 3);
+stem(x1(1:50));
 hold on;
-stem([1:50], x2_interpolated(1:50));
+stem(x2_interpolated(1:50));
+
+x3_interpolated = interpolate(zero_padded_fft(x3, 2), 2);
+
+% disp(norm(x2_interpolated - x1));
 
 figure(2);
-stem(zero_padded_fft(x2, 1));
+subplot(4, 1, 1);
+stem(x1(1:50));
+
+subplot(4, 1, 2);
+stem(x3_interpolated(1:50));
+
+subplot(4, 1, 3);
+stem(x1(1:50));
+hold on;
+stem(x3_interpolated(1:50));
+
+subplot(4, 1, 4);
+stem(x1(1:50));
+hold on;
+stem(x3_interpolated(1:50));
+hold on;
+stem(x2_interpolated(1:50));
