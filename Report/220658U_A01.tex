@@ -10,6 +10,7 @@
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{tikz}
+\usepackage{parskip}
 \usepackage[hidelinks]{hyperref}
 
 \newcommand{\extlink}{
@@ -56,10 +57,19 @@
 	
 	\begin{figure}[H]
 		\centering
-		% \includegraphics[width=0.8\linewidth]{images/q1_3_1.png}
+		\includegraphics[width=\linewidth]{images/q1_3_1.png}
 		\label{subset_dfts}
-		\caption{Caption}
+		\caption{DFT-magnitude plots of signals $S_1$ through $S_5$}
 	\end{figure}
+	
+	\textbf{Question 04} We use this code. Figure \ref{avg_dft} shows the magnitude plot resulting from averaging the DFTs of $L = 14$ consecutive subsets taken from the given signal.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{images/q1_3_2.png}
+		\label{avg_dft}
+		\caption{Magnitude plot of the averaged DFT over several subsets}
+	\end{figure} 
 	
 	\section{Interpolation}
 	
