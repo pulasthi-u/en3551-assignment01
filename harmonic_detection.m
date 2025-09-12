@@ -76,7 +76,7 @@ tiledlayout(3, 2);
 
 % We will try smaller values L_s for L, starting from 1 less than the last
 % used value
-for L_s = L-1:-2:1
+for L_s = [13 10 8 7 6 5]
     % Obtain the average DFT for the chosen pair L_s, K
     X_avg_ = dft_average(xn_test, L_s, K);
     X_avg_mag_ = abs(X_avg_);
