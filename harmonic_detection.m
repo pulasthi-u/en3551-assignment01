@@ -72,32 +72,23 @@ grid minor;
 % visible?
 
 figure(3);
-tiledlayout(5,2);
+tiledlayout(3, 2);
 
 % We will try smaller values L_s for L, starting from 1 less than the last
 % used value
-for L_s = L-1:-1:1
-    if ~mod(K*L, L_s) 
-        % We only choose values of L_s that allow us to use all K*L samples
-        % previously used; i.e., such that there exists some K' for which
-        % K'*L_s = K*L
-        K_ = K*L / L_s;
+for L_s = L-1:-2:1
+    % Obtain the average DFT for the chosen pair L_s, K
+    X_avg_ = dft_average(xn_test, L_s, K);
+    X_avg_mag_ = abs(X_avg_);
 
-        % Obtain the average DFT for the chosen pair L, K
-        X_avg_ = dft_average(xn_test, L_s, K_);
-        X_avg_mag_ = abs(X_avg_);
+    nexttile;
+    
+    % Plot
+    stem(f, X_avg_mag_, "Marker", "o", "MarkerSize", 3, "MarkerFaceColor", "auto");
 
-        f = [0:(K_-1)] * fs / K_; % Obtain the frequency axis for the chosen K
-
-        nexttile;
-        
-        % Plot
-        stem(f, X_avg_mag_, "Marker", "o", "MarkerSize", 3, "MarkerFaceColor", "auto");
-
-        title("Average DFT Magnitude, $L=" + L_s + "$, $K=" + K_ + "$", "Interpreter", "latex");
-        xlabel("Frequency (Hz)", "Interpreter", "latex");
-        xlim([0 f(K_)]);
-        grid on;
-        grid minor;
-    end
+    title("Average DFT Magnitude, $L=" + L_s + "$, $K=" + K + "$", "Interpreter", "latex");
+    xlabel("Frequency (Hz)", "Interpreter", "latex");
+    xlim([0 f(K)]);
+    grid on;
+    grid minor;
 end
