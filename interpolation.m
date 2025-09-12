@@ -1,47 +1,124 @@
+clear;
+clc;
+close all;
+
+% 3.2.1 - Load the signal
 load handel;
 
+% We will only be looking at the first 20,000 samples of the signal
 N = 20000;
+x_1 = y(1:N);
 
-x1 = y(1:N);
-x2 = y(1:2:N);
-x3 = y(1:3:N);
-x4 = y(1:4:N);
+% Visualize the original signal
+figure;
 
-x2_interpolated = interpolate(zero_padded_dft(x2, 1), 1);
+stem(x_1(1:50), "Marker", "o", "MarkerSize", 3, "MarkerFaceColor", "auto");
 
-% disp(norm(x2_interpolated - x1));
+title("Original Signal", "Interpreter", "latex");
+grid on;
+grid minor;
 
-figure(1);
-subplot(3, 1, 1);
-stem(x1(1:50));
+% Empty array to store interpolations for later comparison
+interpolations = {};
 
-subplot(3, 1, 2);
-stem(x2_interpolated(1:50));
+for i = 2:4
+    % 3.2.2 - Form the signal x_i as described
+    x_i = y(1:i:N);
+    
+    % 3.2.3 -
+    % Obtain an interpolated version of x_i from the zero-padded DFT of x_i
+    % with K = i - 1
+    x_i_interpolated = interpolate(zero_padded_dft(x_i, i-1), i-1);
 
-subplot(3, 1, 3);
-stem(x1(1:50));
+    % Compute the norm of the difference between the original signal and
+    % the interpolated version
+    disp("Norm of difference: " + difference_norm(x_i_interpolated, x_1));
+
+    % Plot the signals for comparison
+    plot_interpolation_v_actual(x_i_interpolated, x_1);
+
+    % Save the current interpolated version for later comparison
+    interpolations{end+1} = x_i_interpolated;
+end
+
+% Plot all interpolated signals together, and on top of each other with the
+% original signal for comparison
+figure;
+
+% Plot the original signal
+subplot(5, 1, 1);
+
+stem(x_1(1:50), "Marker", "o", "MarkerSize", 3, "MarkerFaceColor", "auto");
+
+title("Original Signal", "Interpreter", "latex");
+grid on;
+grid minor;
+
+% Plot each interpolated signal in succession
+for i = 1:3
+    subplot(5, 1, i + 1);
+
+    interpolation_i = interpolations{i};
+    stem(interpolation_i(1:50), "Marker", "o", "MarkerSize", 3, "MarkerFaceColor", "auto");
+    
+    title("$x_" + (i+1) + "$ Interpolated", "Interpreter", "latex");
+    grid on;
+    grid minor;
+end
+
+% Plot all interpolations and the original signal on top of each other
+subplot(5, 1, 5);
+
+stem(x_1(1:50), "Marker", "o", "MarkerSize", 3, "MarkerFaceColor", "auto");
 hold on;
-stem(x2_interpolated(1:50));
 
-x3_interpolated = interpolate(zero_padded_dft(x3, 2), 2);
+for j = 1:3
+    interpolation_j = interpolations{j};
+    stem(interpolation_j(1:50), "Marker", "o", "MarkerSize", 2+j);
+    hold on;
+end
 
-% disp(norm(x2_interpolated - x1));
+title("Comparison", "Interpreter", "latex");
+legend("Original Signal", "$x_2$ Interpolated", "$x_3$ Interpolated", "$x_4$ Interpolated", "Interpreter", "latex");
+grid on;
+grid minor;
 
-figure(2);
-subplot(4, 1, 1);
-stem(x1(1:50));
+% Helper Functions
 
-subplot(4, 1, 2);
-stem(x3_interpolated(1:50));
+function [] = plot_interpolation_v_actual(interpolation, actual)
+    figure;
 
-subplot(4, 1, 3);
-stem(x1(1:50));
-hold on;
-stem(x3_interpolated(1:50));
+    % Plot the interpolated signal
+    subplot(2, 1, 1);
+    
+    stem(interpolation(1:50), "Marker", "o", "MarkerSize", 3, "MarkerFaceColor", "auto");
 
-subplot(4, 1, 4);
-stem(x1(1:50));
-hold on;
-stem(x3_interpolated(1:50));
-hold on;
-stem(x2_interpolated(1:50));
+    title("Interpolated Signal", "Interpreter", "latex");
+    grid on;
+    grid minor;
+
+    % Plot the interpolated signal on top of the actual signal for
+    % comparison
+    subplot(2, 1, 2);
+    
+    stem(interpolation(1:50), "Marker", "o", "MarkerSize", 3, "MarkerFaceColor", "auto");
+    hold on;
+    stem(actual(1:50), "Marker", "o", "MarkerSize", 5);
+
+    title("Interpolated Signal vs. Actual Signal", "Interpreter", "latex");
+    legend("Interpolated Signal", "Actual Signal");
+    grid on;
+    grid minor;
+end
+
+function [result] = difference_norm(x1, x2)
+    % Find the length of the shorter signal
+    N = min(length(x1), length(x2));
+    
+    % Truncate both signals to the same length
+    x1_trunc = x1(1:N);
+    x2_trunc = x2(1:N);
+
+    % Compute the norm of the difference between the truncated signals
+    result = norm(x1_trunc - x2_trunc);
+end

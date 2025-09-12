@@ -1,5 +1,5 @@
 function [result] = interpolate(X, K)
-%UNTITLED2 Summary of this function goes here
+%INTERPOLATE Summary of this function goes here
 %   Detailed explanation goes here
 
 N = length(X)/(K+1);

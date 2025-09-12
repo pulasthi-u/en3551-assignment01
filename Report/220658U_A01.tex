@@ -22,6 +22,23 @@
 	\end{tikzpicture}
 }
 
+\lstset{
+	language=Matlab,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{blue},
+	commentstyle=\color{gray},
+	stringstyle=\color{red},
+	showstringspaces=false,
+	columns=fullflexible,
+	breaklines=true,
+	captionpos=b,
+	backgroundcolor=\color[rgb]{0.96,0.96,0.96},
+	xleftmargin=6pt,
+	frame=tlbr,
+	framesep=6pt,
+	framerule=1pt,
+}
+
 \title{
 	\huge{\textbf{
 		Assignment 01
@@ -58,8 +75,8 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=\linewidth]{images/q1_3_1.png}
-		\label{subset_dfts}
 		\caption{DFT-magnitude plots of signals $S_1$ through $S_5$}
+		\label{subset_dfts}
 	\end{figure}
 	
 	\textbf{Question 04} We use this code. Figure \ref{avg_dft} shows the magnitude plot resulting from averaging the DFTs of $L = 14$ consecutive subsets taken from the given signal.
@@ -67,11 +84,40 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=\linewidth]{images/q1_3_2.png}
-		\label{avg_dft}
 		\caption{Magnitude plot of the averaged DFT over several subsets}
+		\label{avg_dft}
 	\end{figure} 
 	
 	\section{Interpolation}
+	
+	\textbf{Question 01} A plot of the first 50 samples of the loaded signal is given in Figure \ref{orig_x1}.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.9\linewidth]{images/q2_orig_sig.png}
+		\caption{Original signal}
+		\label{orig_x1}
+	\end{figure}
+	
+	\textbf{Question 03} Steps (a) through (c) were carried out using the code in Listing X in Appendix \ref{code}. Outputs obtained from the code and relevant plots are as shown in Figures X, Y, and Z respectively. An analysis of the results obtained follows.
+	
+	\begin{enumerate}[label=(\alph*)]
+		\item \phantom{a}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.9\textwidth]{images/q2_x2_interp.png}
+			\caption{$x_2$ Interpolated}
+			\label{x2_interp}
+		\end{figure}
+		
+		\begin{lstlisting}[caption={abc}]
+Norm of difference: 6.1447
+		\end{lstlisting}
+		
+		\item b
+		\item c
+		\item d
+	\end{enumerate}
 	
 	\appendix
 	\section{Code Snippets}

@@ -1,3 +1,7 @@
+clear;
+clc;
+close all;
+
 % 3.1.1 - Load the relevant signal
 load('signal658.mat');
 

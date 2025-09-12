@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.6)  11 SEP 2025 13:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.6)  11 SEP 2025 21:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -752,8 +752,11 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip55
 )
-LaTeX Font Info:    Trying to load font information for OT1+bch on input line 5
-1.
+(C:\Users\HP\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+)
+LaTeX Font Info:    Trying to load font information for OT1+bch on input line 6
+8.
 
 (C:\Users\HP\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1bch.fd
 File: ot1bch.fd 2004/10/18 font definitions for OT1/bch.
@@ -761,24 +764,24 @@ File: ot1bch.fd 2004/10/18 font definitions for OT1/bch.
 (220658U_A01.aux)
 \openout1 = `220658U_A01.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -845,18 +848,18 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 \c@lstlisting=\count359
-Package hyperref Info: Link coloring OFF on input line 51.
+Package hyperref Info: Link coloring OFF on input line 68.
  (220658U_A01.out) (220658U_A01.out)
 \@outlinefile=\write4
 \openout4 = `220658U_A01.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 53.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
 
 
 (C:\Users\HP\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 53.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
 
 
 (C:\Users\HP\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -865,13 +868,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <images/q1_3_1.png, id=28, 1445.4pt x 697.10437pt>
 File: images/q1_3_1.png Graphic file (type png)
 <use images/q1_3_1.png>
-Package pdftex.def Info: images/q1_3_1.png  used on input line 60.
+Package pdftex.def Info: images/q1_3_1.png  used on input line 77.
 (pdftex.def)             Requested size: 469.75499pt x 226.55623pt.
-<images/q1_3_2.png, id=30, 1207.51125pt x 654.19406pt>
+<images/q1_3_2.png, id=30, 915.42pt x 499.6266pt>
 File: images/q1_3_2.png Graphic file (type png)
 <use images/q1_3_2.png>
-Package pdftex.def Info: images/q1_3_2.png  used on input line 69.
-(pdftex.def)             Requested size: 469.75499pt x 254.49579pt.
+Package pdftex.def Info: images/q1_3_2.png  used on input line 86.
+(pdftex.def)             Requested size: 469.75499pt x 256.3843pt.
 
 
 [1
@@ -879,8 +882,24 @@ Package pdftex.def Info: images/q1_3_2.png  used on input line 69.
 {C:/Users/HP/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/HP/AppD
 ata/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./images/q1_3_1.png (PN
 G copy)>]
+<images/q2_orig_sig.png, id=44, 930.3558pt x 484.6908pt>
+File: images/q2_orig_sig.png Graphic file (type png)
+<use images/q2_orig_sig.png>
+Package pdftex.def Info: images/q2_orig_sig.png  used on input line 97.
+(pdftex.def)             Requested size: 422.77661pt x 220.25362pt.
+<images/q2_x2_interp.png, id=46, 1190.19656pt x 627.09282pt>
+File: images/q2_x2_interp.png Graphic file (type png)
+<use images/q2_x2_interp.png>
+Package pdftex.def Info: images/q2_x2_interp.png  used on input line 108.
+(pdftex.def)             Requested size: 422.77661pt x 222.74869pt.
 
-[2 <./images/q1_3_2.png>] (220658U_A01.aux)
+
+[2 <./images/q1_3_2.png (PNG copy)> <./images/q2_orig_sig.png (PNG copy)>]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 113.
+
+
+[3 <./images/q2_x2_interp.png>] (220658U_A01.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -889,22 +908,23 @@ Package rerunfilecheck Info: File `220658U_A01.out' has not changed.
 (rerunfilecheck)             Checksum: D4FF8C319E7C2AAA712472BBAEF55A21;630.
  ) 
 Here is how much of TeX's memory you used:
- 24710 strings out of 473530
- 468249 string characters out of 5716247
- 856929 words of memory out of 5000000
- 47551 multiletter control sequences out of 15000+600000
- 579880 words of font info for 79 fonts, out of 8000000 for 9000
+ 25586 strings out of 473530
+ 477671 string characters out of 5716247
+ 1019419 words of memory out of 5000000
+ 48414 multiletter control sequences out of 15000+600000
+ 580048 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,8n,87p,538b,695s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,8n,87p,538b,1766s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/HP/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8
 a.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/b
 chr8a.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
 s/cm/cmmi10.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
 msfonts/cm/cmr10.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb>
-Output written on 220658U_A01.pdf (2 pages, 281013 bytes).
+lic/amsfonts/cm/cmr7.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmtt10.pfb>
+Output written on 220658U_A01.pdf (3 pages, 433219 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
- 10 named destinations out of 1000 (max. 500000)
- 63 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 99 PDF objects out of 1000 (max. 8388607)
+ 19 named destinations out of 1000 (max. 500000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
